@@ -3,9 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import VueResourse from 'vue-resource'
+import axios from 'axios'
 
-Vue.use(VueResourse)
+Vue.prototype.axios = axios
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -14,12 +14,4 @@ new Vue({
   router,
   components: { App },
   template: '<App/>'
-})
-console.log(Vue.http.interceptors)
-Vue.http.interceptors.push(function (request, next) {
-  console.log('request init')
-  next(function (response) {
-    console.log('response init')
-    return response
-  })
 })

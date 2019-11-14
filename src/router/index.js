@@ -5,7 +5,7 @@ import GoodsList from '@/views/GoodsList'
 import Title from '@/views/Title'
 import Image from '@/views/Image'
 import Cart from '@/views/Cart'
-import Resource from '@/components/Resource'
+import Axios from '@/components/axios'
 
 Vue.use(Router)
 
@@ -24,9 +24,9 @@ export default new Router({
       }
     },
     {
-      path: '/vue-resource',
-      name: 'resource',
-      component: Resource
+      path: '/axios',
+      name: 'Axios',
+      component: Axios
     },
     {
       path: '/goods',
