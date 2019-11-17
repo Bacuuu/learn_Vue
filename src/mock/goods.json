@@ -1,0 +1,11 @@
+{
+  "status": "0",
+  "msg": "",
+  "result": [
+    {
+      "productID": "100001",
+      "productName": "HuaWei Mate20 Pro",
+      "productPrice": "3999"
+    }
+  ]
+}
