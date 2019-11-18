@@ -4,7 +4,7 @@ import Router from 'vue-router'
 // import GoodsList from '@/views/GoodsList'
 // import Title from '@/views/Title'
 // import Image from '@/views/Image'
-// import Cart from '@/views/Cart'
+import Cart from '@/views/Cart'
 // import Axios from '@/components/axios'
 import PGoodsList from '../views/PGoodsList'
 
@@ -17,6 +17,10 @@ export default new Router({
   routes: [{
     path: '/',
     component: PGoodsList
+  },
+  {
+    path: '/api/goodslist',
+    component: Cart
   }
     // {
     //   path: '/',

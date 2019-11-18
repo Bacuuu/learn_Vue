@@ -1,11 +1,7 @@
 import Mock from 'mockjs'
-// import goods from './goods.json'
+import goods from './goods.json'
 const url = '/api/goodslist'
-const method = 'post'
-const data = {
-  'id': '@guid',
-  'name': '@cname'
-}
-Mock.mock(url, method, data)
+const method = 'get'
+Mock.mock(url, method, goods)
 
 export default Mock
