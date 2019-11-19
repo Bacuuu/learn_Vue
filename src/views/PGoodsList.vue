@@ -5,7 +5,6 @@
       <span slot="first">/Goods</span>
       <span slot="second">/Apple</span>
     </nav-bread>
-    <a href='javascript:;' @click='getgoodslist'>getdata</a>
     <div style='display:flex;flex-direction:row;flex-wrap:wrap;'>
     <nav-goods-card v-for='card in data' :data='card' :key='card.name'></nav-goods-card>
     </div>
@@ -25,17 +24,16 @@ export default {
     }
   },
   mounted: function () {
+    this.axios.get('/api/goodslist')
+      .then(res => {
+        this.data = res.data.result
+      })
+      .catch(err => {
+        console.log(err)
+      })
   },
   methods: {
-    getgoodslist: function () {
-      this.axios.get('/api/goodslist')
-        .then(res => {
-          this.data = res.data.result
-        })
-        .catch(err => {
-          console.log(err)
-        })
-    }
+
   },
   components: {
     NavHeader,
