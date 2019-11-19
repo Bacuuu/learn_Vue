@@ -1,0 +1,17 @@
+.cardList {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+}
+
+.priceFilter {
+  position: relative;
+  width:300px;
+  height:350px;
+  text-align: center;
+}
+.priceFilter a {
+  height: 20%;
+  display: block;
+  line-height: 70px
+}
