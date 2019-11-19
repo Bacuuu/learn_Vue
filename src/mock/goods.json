@@ -1,11 +1,12 @@
 {
   "status": "0",
   "msg": "",
-  "result": [
+  "result|10-20": [
     {
-      "productID": "100001",
-      "productName": "HuaWei Mate20 Pro",
-      "productPrice": "3999"
+      "productID|10000-99999": 1,
+      "name": "@cname",
+      "price|1499-4999": 1,
+      "color": "@color"
     }
   ]
 }
