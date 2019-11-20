@@ -7,11 +7,12 @@
     </nav-bread>
     <div class="cardList">
       <div class='priceFilter'>
-        <a href="javascript:;" v-for='price in priceFilter' :key=price>{{price.startPrice}}--{{price.endPrice}}</a>
+        <a href="javascript:;" v-for='(price, index) in priceFilter' :key=price.id  :class='{"priceChoose":priceChecked == index}' @click='priceCheck(index)'>{{price.startPrice}}--{{price.endPrice}}</a>
       </div>
       <nav-goods-card v-for='card in data' :data='card' :key='card.name'></nav-goods-card>
     </div>
     <nav-footer></nav-footer>
+    <div style="margin-bottom:70px"></div>
   </div>
 </template>
 
@@ -25,6 +26,7 @@ export default {
   data () {
     return {
       data: {},
+      priceChecked: 0,
       priceFilter: [
         {
           startPrice: 1499,
@@ -55,7 +57,9 @@ export default {
       })
   },
   methods: {
-
+    priceCheck: function (index) {
+      this.priceChecked = index
+    }
   },
   components: {
     NavHeader,
