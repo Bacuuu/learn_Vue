@@ -1,7 +1,7 @@
 <template>
   <div class="goodsCard">
     <!-- <div class='goodsImg' :style='"background:"+data.color'> -->
-      <img :src='imgSrc' alt="">
+      <img v-lazy='imgSrc' alt="" :key='imgSrc'>
     <!-- </div> -->
     <span>商品名称:{{data.name}}</span>
     <span>价格:{{data.price}}</span>
